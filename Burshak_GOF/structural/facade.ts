@@ -15,7 +15,7 @@ class ComputerFacade {
     }
 }
 // --- Тест Facade ---
-const facade = new Facade();
+const computer = new ComputerFacade();
 
 console.log("--- Тест Facade ---");
-console.log(facade.simplifiedOperation());
+computer.start();

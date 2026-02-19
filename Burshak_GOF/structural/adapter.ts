@@ -17,8 +17,8 @@ class SystemAdapter implements ModernInterface {
     }
 }
 // --- Тест Adapter ---
-const oldService = new OldService();
-const adapter = new Adapter(oldService);
+const oldSystem = new OldSystem();
+const adapter = new SystemAdapter(oldSystem);
 
 console.log("--- Тест Adapter ---");
 console.log("Результат через адаптер:", adapter.request());

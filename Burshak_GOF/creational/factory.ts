@@ -28,10 +28,9 @@ class SeaLogistics extends Logistics {
 }
 
 // --- Тест Factory ---
-const factory = new MyFactory(); // Заміни MyFactory на назву своєї фабрики
-const productA = factory.createProduct('A');
-const productB = factory.createProduct('B');
+const roadLogistics = new RoadLogistics();
+const seaLogistics = new SeaLogistics();
 
 console.log("--- Тест Factory ---");
-console.log(productA.operation());
-console.log(productB.operation());
+console.log(roadLogistics.planDelivery());
+console.log(seaLogistics.planDelivery());

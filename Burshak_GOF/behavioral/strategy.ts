@@ -17,9 +17,11 @@ class ShoppingCart {
     checkout(amount: number) { this.strategy.pay(amount); }
 }
 // --- Тест Strategy ---
-const context = new Context(new ConcreteStrategyA());
-console.log("--- Тест Strategy ---");
-context.execute();
+const cart = new ShoppingCart();
+cart.setPaymentMethod(new CreditCardPayment());
 
-context.setStrategy(new ConcreteStrategyB());
-context.execute();
+console.log("--- Тест Strategy ---");
+cart.checkout(100);
+
+cart.setPaymentMethod(new PayPalPayment());
+cart.checkout(200);
