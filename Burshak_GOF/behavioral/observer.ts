@@ -18,6 +18,7 @@ class NewsReader implements Subscriber {
         console.log(`${this.name} отримав новину: ${message}`);
     }
 }
+
 // --- Тест Observer ---
 const subject = new NewsAgency();
 const obs1 = new NewsReader("Підписник 1");
