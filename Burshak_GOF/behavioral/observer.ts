@@ -24,10 +24,12 @@ const subject = new NewsAgency();
 const obs1 = new NewsReader("Підписник 1");
 const obs2 = new NewsReader("Підписник 2");
 const obs3 = new NewsReader("Підписник 3");
+const obs4= new NewsReader("Підписник 4");
 
 subject.subscribe(obs1);
 subject.subscribe(obs2);
 subject.subscribe(obs3);
+subject.subscribe(obs4);
 
 console.log("--- Тест Observer ---");
 subject.notify("Нове повідомлення!");
